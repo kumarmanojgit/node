@@ -1,4 +1,4 @@
-// asynchronous mudule system 
+// synchronous mudule system 
 const fs=require("fs");
 
 //create file
@@ -36,11 +36,25 @@ fs.renameSync('readwrite.txt','read.txt');
 
 // CRUD OPERATION
 
-// create folder
+// 1.create folder
 fs.mkdirSync('manoj');
 // create file inside manoj folder
 fs.writeFileSync('manoj/bio.txt','manoj kumar');
 
 // write something without overlap in exiting file
 fs.appendFileSync('manoj/bio.txt','mandal');
+
+//2. read data without buffer. it has another method
+const data= fs.readFileSync('manoj/bio.txt','utf8');
+console.log(data);
+
+//3.rename file
+fs.renameSync('manoj/bio.txt','manoj/crud.txt');
+
+//4.delete first file
+fs.unlinkSync('manoj/crud.txt');
+// the folder
+fs.rmdirSync('manoj.txt');
+
+
 

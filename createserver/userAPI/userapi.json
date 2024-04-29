@@ -1,0 +1,33 @@
+[
+  {
+    "id":1,
+    "name":"manoj Kumar",
+    "email":"krmanoj72099@gmail.com",
+    "address":{
+      "street":"Bagodar",
+      "city":"hazaribagh",
+      "pincode":"825322",
+      "Geo":{
+        "lat":"-37.3159",
+        "long":"-81.24"
+      }
+    },
+    "phone":"7209901099"
+  },
+
+  {
+    "id":2,
+    "name":"manoj ",
+    "email":"krmanoj72099@gmail.com",
+    "address":{
+      "street":"alagdiha",
+      "city":"Dhanbad",
+      "pincode":"825301",
+      "Geo":{
+        "lat":"-37.3159",
+        "long":"-81.24"
+      }
+    },
+    "phone":"7209901093"
+  }
+]

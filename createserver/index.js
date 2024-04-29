@@ -5,9 +5,14 @@
 //you should include an HTTP header with the correct content type.
 
 const http= require("http");
+const fs=require("fs");
 
 const server =http.createServer((req,res)=>
+
 { 
+  const data=fs.writeFileSync(`${__dirname}/userAPI/userapi.json`,"utf-8");
+  const objdata=JSON.parse(data);
+
   if(req.url=='/')
   {
     res.end("This is my first server created by me !");
@@ -15,6 +20,11 @@ const server =http.createServer((req,res)=>
   else if(req.url=='/about')
   {
     res.end("this is about page");
+  }
+  else if(req.url=='/userapi')
+  { 
+    res.writeHead(200,{"content-type":"application/json"});
+    res.end(objdata[1].name);
   }
   else if(req.url=='/contact')
   {
